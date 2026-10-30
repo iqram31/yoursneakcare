@@ -1,0 +1,38 @@
+@import '@fontsource/bebas-neue';
+@import '@fontsource-variable/dm-sans';
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #231f1e;
+  --color-ink-soft: #5d5552;
+  --color-paper: #f3f0ea;
+  --color-card: #fbf9f5;
+  --color-line: #d9d3c9;
+  --color-rust: #b8481f;
+  --color-rust-light: #ef7a4d;
+  --font-display: 'Bebas Neue', Impact, sans-serif;
+  --font-sans: 'DM Sans Variable', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rust-light);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
